@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Destinations - India Unfolded</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           DESTINATIONS PAGE
+        ========================================= */
+
+        .destination-intro {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 65px 25px 35px;
+            text-align: center;
+        }
+
+        .destination-intro h2 {
+            color: #0B3D3A;
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .destination-intro p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           REGION SECTION
+        ========================================= */
+
+        .region-section {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 30px 35px 70px;
+        }
+
+        .region-title {
+            margin-bottom: 28px;
+        }
+
+        .region-title h2 {
+            color: #0B3D3A;
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            margin: 0 0 8px;
+        }
+
+        .region-title p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           FEATURED DESTINATIONS
+        ========================================= */
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 32px;
+        }
+
+        .destination-card {
+            display: block;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 6px 22px rgba(11, 61, 58, 0.08);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 14px 32px rgba(11, 61, 58, 0.15);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 285px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .destination-content {
+            padding: 23px 25px 27px;
+        }
+
+        .destination-region {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: #A47720;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+
+        .destination-content h3 {
+            color: #0B3D3A;
+            font-size: 25px;
+            margin: 0 0 10px;
+        }
+
+        .destination-content p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           MORE DESTINATIONS
+        ========================================= */
+
+        .more-destinations {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 10px 35px 75px;
+        }
+
+        .more-title {
+            margin-bottom: 28px;
+        }
+
+        .more-title h2 {
+            color: #0B3D3A;
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .more-title p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .more-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .small-destination {
+            display: block;
+            background: #fff;
+            border-radius: 9px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 5px 18px rgba(11, 61, 58, 0.07);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .small-destination:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(11, 61, 58, 0.13);
+        }
+
+        .small-destination img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .small-destination-content {
+            padding: 17px 18px 20px;
+        }
+
+        .small-destination-content h3 {
+            color: #0B3D3A;
+            font-size: 18px;
+            margin: 0 0 7px;
+        }
+
+        .small-destination-content p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           TRAVEL INSPIRATION
+        ========================================= */
+
+        .destination-inspiration {
+            padding: 75px 35px;
+            background: #F8F5EF;
+        }
+
+        .inspiration-inner {
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        .inspiration-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .inspiration-heading h2 {
+            color: #0B3D3A;
+            font-size: 30px;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .inspiration-heading p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .inspiration-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .inspiration-box {
+            min-height: 210px;
+            border-radius: 10px;
+            padding: 28px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: #0B3D3A;
+            color: #fff;
+        }
+
+        .inspiration-box h3 {
+            margin: 0 0 8px;
+            font-size: 20px;
+        }
+
+        .inspiration-box p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #E8EDEA;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .destination-cta {
+            max-width: 1150px;
+            margin: 70px auto;
+            padding: 60px 30px;
+            background: #0B3D3A;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .destination-cta h2 {
+            color: #fff;
+            font-size: 30px;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
+        }
+
+        .destination-cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #DCE8E6;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .destination-cta a {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #E8B44A;
+            color: #0B3D3A;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .more-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .inspiration-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 700px) {
+
+            .destination-intro {
+                padding: 45px 20px 25px;
+            }
+
+            .destination-intro h2 {
+                font-size: 25px;
+            }
+
+            .destination-intro p {
+                font-size: 14px;
+            }
+
+            .region-section {
+                padding: 25px 18px 50px;
+            }
+
+            .region-title h2 {
+                font-size: 23px;
+            }
+
+            .destination-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .destination-card img {
+                height: 235px;
+            }
+
+            .destination-content {
+                padding: 20px;
+            }
+
+            .destination-content h3 {
+                font-size: 22px;
+            }
+
+            .more-destinations {
+                padding: 0 18px 55px;
+            }
+
+            .more-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .small-destination img {
+                height: 210px;
+            }
+
+            .destination-inspiration {
+                padding: 55px 18px;
+            }
+
+            .inspiration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destination-cta {
+                margin: 50px 18px;
+                padding: 45px 20px;
+            }
+
+            .destination-cta h2 {
+                font-size: 23px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMALL PHONE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            .destination-card img {
+                height: 210px;
+            }
+
+            .small-destination img {
+                height: 190px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <nav>
+
+        <a href="index.html">India Unfolded</a>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="trips.html">Trips</a>
+            <a href="about.html">About</a>
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="destination-hero">
+    </section>
+
+
+
+    <!-- =========================================
+         INTRO
+    ========================================== -->
+
+    <section class="destination-intro">
+
+        <h2>EXPLORE INDIA</h2>
+
+        <p>
+            India is a country of remarkable contrasts. Discover ancient cities,
+            peaceful beaches, Himalayan landscapes, colourful cultures and
+            unforgettable journeys across every region.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FEATURED DESTINATIONS
+    ========================================== -->
+
+    <section class="region-section">
+
+        <div class="region-title">
+
+            <h2>FEATURED DESTINATIONS</h2>
+
+            <p>
+                Start with some of India's most memorable places.
+            </p>
+
+        </div>
+
+
+        <div class="destination-grid">
+
+
+            <!-- AGRA -->
+
+            <a href="experiences.html" class="destination-card">
+
+                <img src="images/taj-mahal.jpg"
+                     alt="Taj Mahal in Agra">
+
+                <div class="destination-content">
+
+                    <span class="destination-region">
+                        North India
+                    </span>
+
+                    <h3>Agra</h3>
+
+                    <p>
+                        Discover the Taj Mahal, magnificent Mughal architecture
+                        and the fascinating history of one of India's most famous cities.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- GOA -->
+
+            <a href="experiences.html" class="destination-card">
+
+                <img src="images/goa.jpg"
+                     alt="Beach in Goa">
+
+                <div class="destination-content">
+
+                    <span class="destination-region">
+                        West India
+                    </span>
+
+                    <h3>Goa</h3>
+
+                    <p>
+                        Enjoy golden beaches, colourful sunsets, coastal villages
+                        and Goa's relaxed atmosphere.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- JAIPUR -->
+
+            <a href="experiences.html" class="destination-card">
+
+                <img src="images/jaipur.jpg"
+                     alt="Jaipur">
+
+                <div class="destination-content">
+
+                    <span class="destination-region">
+                        West India
+                    </span>
+
+                    <h3>Jaipur</h3>
+
+                    <p>
+                        Explore magnificent forts, royal palaces and colourful
+                        streets in Rajasthan's iconic Pink City.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- KERALA -->
+
+            <a href="experiences.html" class="destination-card">
+
+                <img src="images/kerala.jpg"
+                     alt="Kerala">
+
+                <div class="destination-content">
+
+                    <span class="destination-region">
+                        South India
+                    </span>
+
+                    <h3>Kerala</h3>
+
+                    <p>
+                        Discover peaceful backwaters, lush landscapes, tropical
+                        beaches and the rich culture of southern India.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- VARANASI -->
+
+            <a href="experiences.html" class="destination-card">
+
+                <img src="images/varanasi.jpg"
+                     alt="Varanasi ghats">
+
+                <div class="destination-content">
+
+                    <span class="destination-region">
+                        North India
+                    </span>
+
+                    <h3>Varanasi</h3>
+
+                    <p>
+                        Experience the ancient ghats, spiritual traditions and
+                        unique atmosphere of one of India's oldest cities.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- LADAKH -->
+
+            <a href="experiences.html" class="destination-card">
+
+                <img src="images/ladakh.jpg"
+                     alt="Ladakh mountains">
+
+                <div class="destination-content">
+
+                    <span class="destination-region">
+                        North India
+                    </span>
+
+                    <h3>Ladakh</h3>
+
+                    <p>
+                        Travel through dramatic mountains, high-altitude valleys
+                        and peaceful Himalayan landscapes.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MORE DESTINATIONS
+    ========================================== -->
+
+    <section class="more-destinations">
+
+        <div class="more-title">
+
+            <h2>MORE PLACES TO EXPLORE</h2>
+
+            <p>
+                Go beyond the classics and discover more of India.
+            </p>
+
+        </div>
+
+
+        <div class="more-grid">
+
+
+            <!-- AMRITSAR -->
+
+            <a href="experiences.html" class="small-destination">
+
+                <img src="images/Amritsar.jpg"
+                     alt="Amritsar">
+
+                <div class="small-destination-content">
+
+                    <h3>Amritsar</h3>
+
+                    <p>
+                        Golden Temple, history and Punjabi culture.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- HAMPI -->
+
+            <a href="experiences.html" class="small-destination">
+
+                <img src="images/Hampi.jpg"
+                     alt="Hampi">
+
+                <div class="small-destination-content">
+
+                    <h3>Hampi</h3>
+
+                    <p>
+                        Ancient ruins, temples and dramatic landscapes.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- RISHIKESH -->
+
+            <a href="experiences.html" class="small-destination">
+
+                <img src="images/Rishikesh.jpg"
+                     alt="Rishikesh">
+
+                <div class="small-destination-content">
+
+                    <h3>Rishikesh</h3>
+
+                    <p>
+                        Yoga, spirituality, rivers and adventure.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- JODHPUR -->
+
+            <a href="experiences.html" class="small-destination">
+
+                <img src="images/Jodhpur.jpg"
+                     alt="Jodhpur">
+
+                <div class="small-destination-content">
+
+                    <h3>Jodhpur</h3>
+
+                    <p>
+                        Discover the Blue City and Mehrangarh Fort.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TRAVEL INSPIRATION
+    ========================================== -->
+
+    <section class="destination-inspiration">
+
+        <div class="inspiration-inner">
+
+            <div class="inspiration-heading">
+
+                <h2>FIND YOUR INDIA</h2>
+
+                <p>
+                    Choose a journey that matches the way you want to travel.
+                </p>
+
+            </div>
+
+
+            <div class="inspiration-grid">
+
+
+                <div class="inspiration-box">
+
+                    <h3>Mountain Escapes</h3>
+
+                    <p>
+                        Find peace among Himalayan valleys, high passes
+                        and beautiful hill towns.
+                    </p>
+
+                </div>
+
+
+
+                <div class="inspiration-box">
+
+                    <h3>Coastal Journeys</h3>
+
+                    <p>
+                        Explore beaches, islands, backwaters and India's
+                        diverse coastal landscapes.
+                    </p>
+
+                </div>
+
+
+
+                <div class="inspiration-box">
+
+                    <h3>Royal Heritage</h3>
+
+                    <p>
+                        Step into India's history through forts, palaces,
+                        monuments and ancient cities.
+                    </p>
+
+                </div>
+
+
+
+                <div class="inspiration-box">
+
+                    <h3>Spiritual India</h3>
+
+                    <p>
+                        Discover temples, ghats, monasteries and places
+                        shaped by centuries of tradition.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="destination-cta">
+
+        <h2>READY TO EXPLORE INDIA?</h2>
+
+        <p>
+            Choose your destination, discover experiences and create
+            a journey that is uniquely yours.
+        </p>
+
+        <a href="planner.html">
+            PLAN YOUR JOURNEY
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-about">
+
+            <h3>India Unfolded</h3>
+
+            <p>
+                Discover destinations, experiences and stories from across India.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h4>Explore</h4>
+
+            <a href="destinations.html">Destinations</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="trips.html">Trips</a>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h4>Company</h4>
+
+            <a href="about.html">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+
+        </div>
+
+
+
+        <div class="newsletter">
+
+            <h4>Stay Inspired</h4>
+
+            <p>
+                Get travel inspiration in your inbox.
+            </p>
+
+            <div class="newsletter-box">
+
+                <input
+                    type="email"
+                    placeholder="Your email">
+
+                <button>
+                    Subscribe
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 India Unfolded. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

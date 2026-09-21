@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Planner - India Unfolded</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <nav>
+            <a href="index.html">India Unfolded</a>
+
+            <div>
+                <a href="index.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="trips.html">Trips</a>
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="planner-hero">
+
+            <div class="planner-hero-content">
+
+                <h1>PLAN YOUR JOURNEY</h1>
+
+                <p>
+                    Create a journey that fits your destination,
+                    travel style and budget.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLANNER -->
+
+        <section class="planner">
+
+            <h2>PLAN YOUR INDIA TRIP</h2>
+
+            <p class="planner-intro">
+                Choose your preferences and create a simple
+                travel plan for your Indian adventure.
+            </p>
+
+
+            <div class="planner-form">
+
+                <!-- DESTINATION -->
+
+                <div class="planner-field">
+
+                    <label for="destination">
+                        Where do you want to go?
+                    </label>
+
+                    <select id="destination">
+
+                        <option value="">
+                            Select Destination
+                        </option>
+
+                        <option value="Goa">
+                            Goa
+                        </option>
+
+                        <option value="Rajasthan">
+                            Rajasthan
+                        </option>
+
+                        <option value="Kerala">
+                            Kerala
+                        </option>
+
+                        <option value="Himachal Pradesh">
+                            Himachal Pradesh
+                        </option>
+
+                        <option value="Ladakh">
+                            Ladakh
+                        </option>
+
+                        <option value="Varanasi">
+                            Varanasi
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DAYS -->
+
+                <div class="planner-field">
+
+                    <label for="days">
+                        How many days?
+                    </label>
+
+                    <select id="days">
+
+                        <option value="">
+                            Select Days
+                        </option>
+
+                        <option value="3">
+                            3 Days
+                        </option>
+
+                        <option value="5">
+                            5 Days
+                        </option>
+
+                        <option value="7">
+                            7 Days
+                        </option>
+
+                        <option value="10">
+                            10 Days
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- STYLE -->
+
+                <div class="planner-field">
+
+                    <label for="style">
+                        Travel Style
+                    </label>
+
+                    <select id="style">
+
+                        <option value="">
+                            Select Travel Style
+                        </option>
+
+                        <option value="Adventure">
+                            Adventure
+                        </option>
+
+                        <option value="Relaxation">
+                            Relaxation
+                        </option>
+
+                        <option value="Culture">
+                            Culture & Heritage
+                        </option>
+
+                        <option value="Nature">
+                            Nature & Wildlife
+                        </option>
+
+                        <option value="Spiritual">
+                            Spiritual
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BUDGET -->
+
+                <div class="planner-field">
+
+                    <label for="budget">
+                        Budget
+                    </label>
+
+                    <select id="budget">
+
+                        <option value="">
+                            Select Budget
+                        </option>
+
+                        <option value="budget">
+                            Budget
+                        </option>
+
+                        <option value="moderate">
+                            Moderate
+                        </option>
+
+                        <option value="luxury">
+                            Luxury
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button id="planButton">
+                    CREATE MY TRIP
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div id="tripResult"></div>
+
+        </section>
+
+
+        <!-- TRAVEL PLANNING TIPS -->
+
+        <section class="planner-tips">
+
+            <h2>TRAVEL PLANNING TIPS</h2>
+
+            <div class="planner-tip-grid">
+
+                <div class="planner-tip">
+
+                    <h3>Choose Your Season</h3>
+
+                    <p>
+                        Check the best time to visit your destination
+                        before planning your journey.
+                    </p>
+
+                    <a href="best-time.html">
+                        Explore Best Time →
+                    </a>
+
+                </div>
+
+
+                <div class="planner-tip">
+
+                    <h3>Plan Your Budget</h3>
+
+                    <p>
+                        Understand accommodation, transport and
+                        daily travel costs before your trip.
+                    </p>
+
+                    <a href="budget.html">
+                        Explore Budget Guide →
+                    </a>
+
+                </div>
+
+
+                <div class="planner-tip">
+
+                    <h3>Prepare Your Essentials</h3>
+
+                    <p>
+                        Make sure you have the right clothes,
+                        documents and travel essentials.
+                    </p>
+
+                    <a href="essentials.html">
+                        Explore Essentials →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 India Unfolded. Explore India, your way.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        const planButton =
+            document.getElementById("planButton");
+
+        const tripResult =
+            document.getElementById("tripResult");
+
+
+        planButton.addEventListener("click", function () {
+
+            const destination =
+                document.getElementById("destination").value;
+
+            const days =
+                document.getElementById("days").value;
+
+            const style =
+                document.getElementById("style").value;
+
+            const budget =
+                document.getElementById("budget").value;
+
+
+            /* CHECK INPUTS */
+
+            if (!destination ||
+                !days ||
+                !style ||
+                !budget) {
+
+                tripResult.innerHTML = `
+                    <div class="planner-message">
+                        Please select all options
+                        before creating your trip.
+                    </div>
+                `;
+
+                tripResult.style.display = "block";
+
+                return;
+            }
+
+
+            /* BUDGET TEXT */
+
+            let budgetText;
+
+            if (budget === "budget") {
+
+                budgetText = "Budget-friendly";
+
+            } else if (budget === "moderate") {
+
+                budgetText = "Moderate";
+
+            } else {
+
+                budgetText = "Luxury";
+
+            }
+
+
+            /* CREATE RESULT */
+
+            tripResult.innerHTML = `
+
+                <div class="trip-result-card">
+
+                    <h2>
+                        Your ${destination} Journey
+                    </h2>
+
+                    <p class="trip-summary">
+                        ${days} Days •
+                        ${style} •
+                        ${budgetText} Travel
+                    </p>
+
+
+                    <div class="trip-details">
+
+                        <div>
+                            <strong>Destination</strong>
+                            <span>${destination}</span>
+                        </div>
+
+                        <div>
+                            <strong>Duration</strong>
+                            <span>${days} Days</span>
+                        </div>
+
+                        <div>
+                            <strong>Travel Style</strong>
+                            <span>${style}</span>
+                        </div>
+
+                        <div>
+                            <strong>Budget</strong>
+                            <span>${budgetText}</span>
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Suggested Plan
+                    </h3>
+
+
+                    <p>
+                        Start by exploring the main attractions
+                        of ${destination}, then include local
+                        experiences, food and enough time to relax.
+                        Adjust your daily schedule according to
+                        your travel style.
+                    </p>
+
+
+                    <div class="trip-links">
+
+                        <a href="getting-around.html">
+                            Getting Around →
+                        </a>
+
+                        <a href="stay.html">
+                            Where to Stay →
+                        </a>
+
+                        <a href="food.html">
+                            Food & Cuisine →
+                        </a>
+
+                        <a href="tips.html">
+                            Travel Tips →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            tripResult.style.display = "block";
+
+
+            tripResult.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    </script>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

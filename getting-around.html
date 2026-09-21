@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Getting Around - India Unfolded</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <nav>
+
+            <a href="index.html">India Unfolded</a>
+
+            <div>
+                <a href="index.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="trips.html">Trips</a>
+                <a href="about.html">About</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+
+        <section class="travel-hero">
+
+            <div class="travel-hero-content"></div>
+
+        </section>
+
+
+        <!-- Transport Section -->
+
+        <section class="transport">
+
+            <h2>CHOOSE YOUR WAY TO TRAVEL</h2>
+
+            <p class="transport-intro">
+                India offers many ways to explore its cities, mountains,
+                beaches and heritage destinations.
+            </p>
+
+
+            <div class="transport-grid">
+
+
+                <!-- Train Travel -->
+
+                <div class="transport-card">
+
+                    <div class="transport-icon">🚆</div>
+
+                    <h3>Train Travel</h3>
+
+                    <p>
+                        One of the best ways to travel long distances in India.
+                        Trains connect major cities and offer scenic journeys.
+                    </p>
+
+                    <h4>Best for</h4>
+
+                    <p>
+                        Long-distance journeys and budget-friendly travel.
+                    </p>
+
+                </div>
+
+
+                <!-- Flights -->
+
+                <div class="transport-card">
+
+                    <div class="transport-icon">✈️</div>
+
+                    <h3>Flights</h3>
+
+                    <p>
+                        Domestic flights are ideal when you want to cover
+                        long distances quickly.
+                    </p>
+
+                    <h4>Best for</h4>
+
+                    <p>
+                        Saving time on long-distance journeys.
+                    </p>
+
+                </div>
+
+
+                <!-- Bus Travel -->
+
+                <div class="transport-card">
+
+                    <div class="transport-icon">🚌</div>
+
+                    <h3>Bus Travel</h3>
+
+                    <p>
+                        Buses connect cities, towns and destinations that
+                        may not have convenient train connections.
+                    </p>
+
+                    <h4>Best for</h4>
+
+                    <p>
+                        Short and medium-distance journeys.
+                    </p>
+
+                </div>
+
+
+                <!-- Metro -->
+
+                <div class="transport-card">
+
+                    <div class="transport-icon">🚇</div>
+
+                    <h3>Metro</h3>
+
+                    <p>
+                        Metro systems make travelling around major Indian
+                        cities faster and easier.
+                    </p>
+
+                    <h4>Best for</h4>
+
+                    <p>
+                        Exploring large cities and avoiding road traffic.
+                    </p>
+
+                </div>
+
+
+                <!-- Taxi -->
+
+                <div class="transport-card">
+
+                    <div class="transport-icon">🚕</div>
+
+                    <h3>Taxi & Cab</h3>
+
+                    <p>
+                        Taxis and app-based cabs are convenient for
+                        sightseeing and local travel.
+                    </p>
+
+                    <h4>Best for</h4>
+
+                    <p>
+                        Door-to-door travel and local sightseeing.
+                    </p>
+
+                </div>
+
+
+                <!-- Self Drive -->
+
+                <div class="transport-card">
+
+                    <div class="transport-icon">🚗</div>
+
+                    <h3>Self Drive</h3>
+
+                    <p>
+                        A road trip gives you the freedom to explore
+                        destinations at your own pace.
+                    </p>
+
+                    <h4>Best for</h4>
+
+                    <p>
+                        Road trips and flexible travel plans.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Detailed Information -->
+
+            <div id="transportInfo" class="transport-info"></div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <!-- Add your existing footer here -->
+
+    </footer>
+
+
+    <!-- Transport Information Script -->
+
+    <script>
+
+        const transportCards =
+            document.querySelectorAll(".transport-card");
+
+        const transportInfo =
+            document.querySelector("#transportInfo");
+
+
+        const transportDetails = {
+
+    "Train Travel": {
+
+        title: "Train Travel in India",
+
+        overview:
+            "Indian Railways connects major cities, towns and tourist destinations across the country. It is one of the most practical choices for long-distance travel.",
+
+        bestFor:
+            "Long-distance journeys, scenic routes, overnight travel and budget-friendly trips.",
+
+        popularRoutes:
+            "Delhi–Agra, Mumbai–Goa, Delhi–Jaipur, Kolkata–Delhi and Chennai–Bengaluru.",
+
+        classes:
+            "Common options include General, Sleeper, AC 3 Tier, AC 2 Tier, AC First Class and Chair Car.",
+
+        booking:
+            `Tickets can be booked online through 
+            <a href="https://www.irctc.co.in/eticket/" target="_blank" rel="noopener noreferrer">
+            IRCTC – Book Train Tickets
+            </a>.`,
+
+        facilities:
+            "Depending on the train and class, facilities may include sleeping berths, charging points, food services and onboard toilets.",
+
+        tips:
+            "Check your train number, boarding station and platform before departure. Keep your ticket and valid identification with you.",
+
+        goodToKnow:
+            "Overnight trains can save both travel time and accommodation costs."
+
+    },
+
+
+    "Flights": {
+
+        title: "Flights in India",
+
+        overview:
+            "Domestic flights are a fast and convenient way to travel between distant cities. They are especially useful when your trip has limited time.",
+
+        bestFor:
+            "Long-distance journeys, short holidays and travellers who want to save time.",
+
+        popularRoutes:
+            "Delhi–Mumbai, Kolkata–Delhi, Mumbai–Goa, Delhi–Bengaluru and Chennai–Hyderabad.",
+
+        classes:
+            "Most domestic flights offer Economy and Business Class depending on the airline.",
+
+        booking:
+            `You can check and book domestic flights directly through 
+            <a href="https://www.airindia.com/en-in/book-flights/domestic-flights" target="_blank" rel="noopener noreferrer">
+            Air India – Domestic Flight Booking
+            </a>.`,
+
+        facilities:
+            "Flights generally provide cabin baggage, checked baggage depending on the fare, seating and onboard services.",
+
+        tips:
+            "Carry your identification, check baggage limits and reach the airport well before departure.",
+
+        goodToKnow:
+            "Flights can be more expensive than trains but can save several hours on long journeys."
+
+    },
+
+
+    "Bus Travel": {
+
+        title: "Bus Travel in India",
+
+        overview:
+            "Buses connect cities, towns and tourist destinations, including many places that do not have convenient railway connections.",
+
+        bestFor:
+            "Short and medium-distance journeys and reaching smaller destinations.",
+
+        popularRoutes:
+            "Delhi–Jaipur, Bengaluru–Mysuru, Chennai–Pondicherry and many regional routes.",
+
+        classes:
+            "Depending on the route, you may find ordinary, AC, Volvo, semi-sleeper and sleeper buses.",
+
+        booking:
+            `For online bus booking across many Indian routes, you can use 
+            <a href="https://www.redbus.in/" target="_blank" rel="noopener noreferrer">
+            redBus – Online Bus Booking
+            </a>.`,
+
+        facilities:
+            "Facilities vary by bus and may include reclining seats, air conditioning, charging points and sleeper berths.",
+
+        tips:
+            "Check the boarding point carefully and arrive early, especially when travelling from a large bus terminal.",
+
+        goodToKnow:
+            "Buses can be particularly useful for hill stations and smaller towns."
+
+    },
+
+
+    "Metro": {
+
+        title: "Metro Travel in India",
+
+        overview:
+            "Metro systems provide fast and convenient transportation within several major Indian cities and help travellers avoid heavy road traffic.",
+
+        bestFor:
+            "City sightseeing, commuting and travelling between major neighbourhoods.",
+
+        popularRoutes:
+            "Metro networks are available in cities including Delhi, Kolkata, Mumbai, Bengaluru, Chennai and Hyderabad.",
+
+        classes:
+            "Most metro systems use standard passenger coaches, with some systems offering reserved or special facilities.",
+
+        booking:
+            `Metro ticketing depends on the city. For Delhi, tickets can be purchased online through the official 
+            <a href="https://onedelhi-pwa.delhitransport.in/" target="_blank" rel="noopener noreferrer">
+            One Delhi – Metro Ticketing
+            </a> portal.`,
+
+        facilities:
+            "Metro stations may offer escalators, lifts, security facilities, information boards and connections to other transport.",
+
+        tips:
+            "Check the route map before travelling and avoid peak hours if you want a more comfortable journey.",
+
+        goodToKnow:
+            "Metro is often one of the quickest ways to cross busy city areas."
+
+    },
+
+
+    "Taxi & Cab": {
+
+        title: "Taxi & Cab",
+
+        overview:
+            "Taxis and app-based cabs provide convenient door-to-door transportation for sightseeing, airport transfers and local travel.",
+
+        bestFor:
+            "Airport transfers, sightseeing, short journeys and places without convenient public transport.",
+
+        popularRoutes:
+            "Hotels to airports, railway stations to hotels and local sightseeing routes.",
+
+        classes:
+            "Options may include standard cabs, larger vehicles, premium cars and outstation taxis.",
+
+        booking:
+            `For app-based cab booking, you can use the official 
+            <a href="https://www.uber.com/in/en/" target="_blank" rel="noopener noreferrer">
+            Uber India
+            </a> website or app.`,
+
+        facilities:
+            "Depending on the service, vehicles may offer air conditioning, digital payment and different seating capacities.",
+
+        tips:
+            "Confirm the pickup location, vehicle details and estimated fare before starting your journey.",
+
+        goodToKnow:
+            "For sightseeing, hiring a cab for several hours can sometimes be more convenient than booking individual rides."
+
+    },
+
+
+    "Self Drive": {
+
+        title: "Self Drive in India",
+
+        overview:
+            "Self-driving gives travellers the freedom to choose their own route, stops and schedule while exploring India by road.",
+
+        bestFor:
+            "Road trips, scenic routes, flexible itineraries and exploring places away from major cities.",
+
+        popularRoutes:
+            "Rajasthan, Kerala, Goa, Himachal Pradesh, Uttarakhand and parts of Northeast India are popular road-trip regions.",
+
+        classes:
+            "Travellers can use their own vehicle or rent cars from available self-drive rental services.",
+
+        booking:
+            `For self-drive car rentals, you can check available vehicles through the official 
+            <a href="https://www.zoomcar.in/" target="_blank" rel="noopener noreferrer">
+            Zoomcar
+            </a> website.`,
+
+        facilities:
+            "Rental cars may range from small hatchbacks to SUVs depending on the destination and rental company.",
+
+        tips:
+            "Carry your driving documents, follow local traffic rules, check road conditions and plan fuel and rest stops.",
+
+        goodToKnow:
+            "Mountain and remote routes may require extra planning because road conditions can change quickly."
+
+    }
+
+};
+
+        /* CARD CLICK */
+
+        transportCards.forEach(function(card) {
+
+            card.addEventListener("click", function() {
+
+                const title =
+                    card.querySelector("h3").textContent;
+
+                const details =
+                    transportDetails[title];
+
+
+                transportInfo.innerHTML = `
+
+                    <h2>${details.title}</h2>
+
+                    <h3>Overview</h3>
+                    <p>${details.overview}</p>
+
+                    <h3>Best For</h3>
+                    <p>${details.bestFor}</p>
+
+                    <h3>Popular Routes</h3>
+                    <p>${details.popularRoutes}</p>
+
+                    <h3>Classes & Options</h3>
+                    <p>${details.classes}</p>
+
+                    <h3>Booking</h3>
+                    <p>${details.booking}</p>
+
+                    <h3>Facilities</h3>
+                    <p>${details.facilities}</p>
+
+                    <h3>Travel Tips</h3>
+                    <p>${details.tips}</p>
+
+                    <h3>Good to Know</h3>
+                    <p>${details.goodToKnow}</p>
+
+                `;
+
+
+                transportInfo.style.display = "block";
+
+
+                transportInfo.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "nearest"
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+    <!-- Main JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
